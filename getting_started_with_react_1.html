@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>React</title>
+    </head>
+    <body>
+        <div id="target"></div>
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const target = document.getElementById('target');
+            const root = ReactDOM.createRoot(target);
+            root.render(
+                <>
+                    <h1>React</h1>
+                    <p>React is a declarative JavaScript library for building user interfaces.</p>
+                </>
+            );
+        </script>
+    </body>
+</html>
