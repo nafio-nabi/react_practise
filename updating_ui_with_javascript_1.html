@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>React</title>
+    </head>
+    <body>
+        <div id="target"></div>
+        <script type="text/javascript">
+            const target = document.getElementById('target');
+            const title = document.createElement('h1');
+            const tText = 'React';
+            const titleText = document.createTextNode(tText);
+            title.appendChild(titleText);
+            target.appendChild(title);
+
+            const description = document.createElement('p');
+            const pText = 'React is a declarative JavaScript library for building interactive user interfaces.'
+            const descriptionText = document.createTextNode(pText);
+            description.appendChild(descriptionText);
+            target.appendChild(description);
+        </script>
+    </body>
+</html>
