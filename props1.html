@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>React</title>
+    </head>
+    <body>
+        <div id="target"></div>
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Custom JS -->
+         <script type="text/jsx">
+            const target = document.getElementById('target');
+
+            function Title({ title }) {
+                return (
+                    <h1>{title ? title : 'React'}</h1>
+                );
+            }
+
+            function Description({ description }) {
+                return (
+                    <p>{description ? description : 'The library for web and native user interfaces.'}</p>
+                );
+            }
+
+            function List() {
+                const concepts = ['Component', 'Prop', 'State'];
+
+                return (
+                    <div>
+                        <p>The core concepts of React are:</p>
+                        <ul>
+                            {concepts.map((concept) => (
+                                <li>{concept}</li>
+                            ))}
+                        </ul>
+                    </div>
+                );
+            }
+
+            function Home() {
+                return (
+                    <div>
+                        <Title title='React' />
+                        <Description description='React is a declarative JavaScript library for building interactive user interfaces.' />
+                        <List />
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(target)
+            root.render(<Home />);
+         </script>
+    </body>
+</html>
